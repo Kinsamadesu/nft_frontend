@@ -3,6 +3,7 @@ import { ThemeProvider } from '@mui/material/styles'
 import { getTheme } from './Theme/theme'
 import MyList from './Pages/MyList'
 import Home from './Pages/Home'
+import Mint from './Pages/Mint'
 import Error from './Pages/Error'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import { Box } from '@mui/material'
@@ -26,6 +27,7 @@ function App() {
       <Box sx={{ display: 'flex', height: '100vh', flexDirection: 'column' }}>
         <BrowserRouter>
           <Routes>
+            <Route path="/mint" element={<Mint />} />
             <Route path="/list" element={<MyList />} />
             <Route path="/" element={<Home />} />
             <Route path="*" element={<Error />} />

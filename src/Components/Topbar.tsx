@@ -22,6 +22,10 @@ const Topbar = () => {
     navigate('/list')
   }
 
+  const onMintClicked = () => {
+    navigate('/mint')
+  }
+
   const onConnectClicked = async () => {
     await connectWallet()
     const accounts = await getAccounts()
@@ -45,7 +49,7 @@ const Topbar = () => {
         {connected ? (
           <>
             <Button onClick={onMyListClicked}>My list</Button>
-            <Button variant="contained" sx={{ ml: 3 }}>
+            <Button variant="contained" sx={{ ml: 3 }} onClick={onMintClicked}>
               Mint!
             </Button>
           </>

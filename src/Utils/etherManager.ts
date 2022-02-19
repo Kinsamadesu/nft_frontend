@@ -43,3 +43,21 @@ export const getTokens = async (account: string) => {
     return metadataList
   }
 }
+
+export const mint = async (account: string) => {
+  if (provider) {
+    const contract = new ethers.Contract(
+      CONTRACT_ADDRESS,
+      CONTRACT_ABI,
+      getSigner()
+    )
+    try {
+      await contract.publicMint(account, {
+        value: ethers.utils.parseEther('0.01'),
+      })
+      return true
+    } catch (e) {
+      return false
+    }
+  }
+}
