@@ -11,6 +11,7 @@ import {
 import { useEffect, useState } from 'react'
 import { useSelector } from 'react-redux'
 import { useNavigate } from 'react-router-dom'
+import Loader from '../Components/Loader'
 import Topbar from '../Components/Topbar'
 import { RootState } from '../store'
 import { Metadata } from '../Types/metadata'
@@ -77,6 +78,21 @@ const MyList = () => {
           <Grid sx={{ mt: 1 }} container spacing={2}>
             {tokensView}
           </Grid>
+        </Box>
+      )}
+      {tokensView === undefined && (
+        <Box sx={{ display: 'flex', height: '100%' }}>
+          <Box
+            sx={{
+              display: 'flex',
+              flex: 1,
+              flexDirection: 'column',
+              justifyContent: 'center',
+              alignItems: 'center',
+            }}
+          >
+            <Loader></Loader>
+          </Box>
         </Box>
       )}
     </>
