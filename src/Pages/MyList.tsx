@@ -36,7 +36,7 @@ const MyList = () => {
   }
 
   const tokensView = tokens?.map((t) => (
-    <Grid item xs={4} md={3} lg={2} key={t.name}>
+    <Grid item xs={12} sm={4} md={3} lg={2} key={t.name}>
       <Card>
         <CardMedia component="img" image={t.image}></CardMedia>
         <CardContent>
