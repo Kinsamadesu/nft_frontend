@@ -1,4 +1,4 @@
-export const CONTRACT_ADDRESS = '0xd0AaB8B4A6e7Cc32B199d32E8856ce07a3797324'
+export const CONTRACT_ADDRESS = '0x9d0B7bcB4fC6Ea0940eb11A3Da901DF1f2F94b73'
 export const CONTRACT_ABI = [
   'constructor(address[],uint256[]) payable',
   'event Approval(address indexed,address indexed,uint256 indexed)',
@@ -15,6 +15,7 @@ export const CONTRACT_ABI = [
   'function getApproved(uint256) view returns (address)',
   'function isApprovedForAll(address,address) view returns (bool)',
   'function listTokenOf(address) view returns (uint256[])',
+  'function maxSupply() pure returns (uint256)',
   'function name() view returns (string)',
   'function owner() view returns (address)',
   'function ownerOf(uint256) view returns (address)',

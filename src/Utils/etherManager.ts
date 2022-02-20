@@ -44,6 +44,30 @@ export const getTokens = async (account: string) => {
   }
 }
 
+export const getMaxSupply = async () => {
+  if (provider) {
+    const contract = new ethers.Contract(
+      CONTRACT_ADDRESS,
+      CONTRACT_ABI,
+      provider
+    )
+    const supply: BigNumber = await contract.maxSupply()
+    return supply.toNumber()
+  }
+}
+
+export const getCurrentSupply = async () => {
+  if (provider) {
+    const contract = new ethers.Contract(
+      CONTRACT_ADDRESS,
+      CONTRACT_ABI,
+      provider
+    )
+    const supply: BigNumber = await contract.totalSupply()
+    return supply.toNumber()
+  }
+}
+
 export const mint = async (account: string) => {
   if (provider) {
     const contract = new ethers.Contract(
