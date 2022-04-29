@@ -1,4 +1,4 @@
-export const CONTRACT_ADDRESS = '0x9d0B7bcB4fC6Ea0940eb11A3Da901DF1f2F94b73'
+export const CONTRACT_ADDRESS = '0xa637a841B474d7E51A099199c2Aa6EEF4B71f2dA'
 export const CONTRACT_ABI = [
   'constructor(address[],uint256[]) payable',
   'event Approval(address indexed,address indexed,uint256 indexed)',
